@@ -1,0 +1,25 @@
+ul {
+    text-align: right;
+    font-size: medium;
+    width: bold;
+    height: 2rem;
+  }
+  #logo {
+    font-weight: bold;
+  }
+  ul {
+    padding-right: 50px;
+    margin: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  li {
+    margin: 10px;
+    position: relative;
+    padding-left: 11px;
+  }
+  nav {
+    background-color: rgb(9, 9, 122);
+    text-emphasis-color: white;
+  }
+  
