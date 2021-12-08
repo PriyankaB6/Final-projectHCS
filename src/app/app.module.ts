@@ -24,8 +24,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { SharedModule } from './shared/shared.module';
+
 
 const routes: Routes = [
   {
@@ -37,12 +37,15 @@ const routes: Routes = [
     component: ForgotPasswordComponent,
   },
 
+
+
   {
     path: 'admin',
-    children: [
-      { path: 'dashboard', component: AdminDashboardComponent },
-      { path: 'registration', component: CorporateRegisterationComponent },
-    ],
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'patient',
+    loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
 
   {
@@ -60,11 +63,10 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AuthComponent,
-    ForgotPasswordComponent,
-    HeaderComponent,
-    FooterComponent
+    ForgotPasswordComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
