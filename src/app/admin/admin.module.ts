@@ -17,18 +17,19 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterModule, Routes } from '@angular/router';
-
+import {MatIconModule} from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
 
 
 const routes2: Routes = [
+ 
+
   {
     path: 'dashboard',
-    component: AdminDashboardComponent
-  },
-  {
-    path: 'registration',
-    component:  CorporateRegisterationComponent,
+    children: [
+      { path: '', component: AdminDashboardComponent },
+      { path: 'registration', component: CorporateRegisterationComponent,outlet: 'admin' },
+    ],
   },
 ]
 
@@ -54,7 +55,7 @@ const routes2: Routes = [
     MatDialogModule,
     MatTreeModule,
     MatSidenavModule,
-    
+    MatIconModule,
     MatExpansionModule,
    
     MatToolbarModule,

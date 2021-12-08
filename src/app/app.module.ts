@@ -37,8 +37,6 @@ const routes: Routes = [
     component: ForgotPasswordComponent,
   },
 
-
-
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
@@ -48,13 +46,6 @@ const routes: Routes = [
     loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
 
-  {
-    path: 'patient',
-    children: [
-      { path: 'dashboard', component: PatientDashboardComponent },
-      { path: 'registration', component: PatientRegistrationComponent },
-    ],
-  },
 ];
 
 
