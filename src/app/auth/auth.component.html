@@ -1,6 +1,103 @@
-login page works
-<br>
+<!-- <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password">
+          </mat-form-field>
+        </mat-card-content>
+    
+        <button mat-stroked-button color="accent" >  <a routerLink="/patient/registration">  patient-signup  </a>  </button> |
+<button  mat-stroked-button color="accent" > <a routerLink="/admin/dashboard">  admin-login </a></button>|
+<button mat-stroked-button color="accent" ><a routerLink="/patient/dashboard">  patient-dashboard </a> </button>|
+<button  mat-stroked-button color="accent" ><a routerLink="/forgot-password"> forgot-password</a>  </button>|
+
+      </form>
+    </mat-card>
+  
+  </div> -->
+<!-- <br>
 <button>  <a routerLink="/patient/registration">  patient-signup  </a>  </button>
 <button > <a routerLink="/admin/dashboard">  admin-login </a></button>
 <button><a routerLink="/patient/dashboard">  patient-dashboard </a> </button>
-<button  ><a routerLink="/forgot-password"> forgot-password</a>  </button>
+<button  ><a routerLink="/forgot-password"> forgot-password</a>  </button> -->
+
+<mat-card fxLayoutAlign="center center">
+  <form fxLayout="column wrap" fxLayoutGap="3%">
+    <div
+      fxLayout="row "
+      fxLayoutAlign="center center"
+      fxLayout.lt-sm="column"
+      fxLayoutGap="3%"
+    >
+      <mat-card-title><h1>Sign In !!</h1> </mat-card-title>
+    </div>
+
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="3%">
+      <mat-form-field color="accent">
+        <input id="fName" matInput type="text" placeholder="UserName" />
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="3%">
+      <mat-form-field color="accent">
+        <input id="lName" matInput type="text" placeholder="Password" />
+      </mat-form-field>
+    </div>
+
+    <div
+      fxLayout="row "
+      fxLayoutAlign="center center"
+      fxLayout.lt-sm="column"
+      fxLayoutGap="1%"
+    >
+      <mat-card-actions fxFlexFill>
+        <button color="accent" mat-raised-button type="submit" fxFlexFill>
+          Submit!
+        </button>
+      </mat-card-actions>
+    </div>
+ 
+    <div
+      fxLayout="row "
+      fxLayoutAlign="center center"
+      fxLayout.lt-sm="column"
+      fxLayoutGap="1%"
+    >
+      <mat-card-actions fxFlexFill>
+        <button color="accent" mat-raised-button  fxFlexFill>
+            <a routerLink="/patient/dashboard">  patient-dashboard </a>
+        </button>
+     
+        <button color="accent" mat-raised-button  fxFlexFill>
+            <a routerLink="/admin/dashboard">  admin-dashboard </a>
+        </button>
+      </mat-card-actions>
+   
+      <mat-card-actions fxFlexFill>
+        <button color="accent" mat-raised-button  fxFlexFill>
+            
+            <a routerLink="/patient/registration">  patient-signup  </a>
+        </button>
+     
+        <button color="accent" mat-raised-button  fxFlexFill>
+            <a routerLink="/forgot-password"> forgot-password</a> 
+        </button>
+      </mat-card-actions>
+    </div>
+  </form>
+</mat-card>
+
+<button>    </button>
+<button > </button>
+<button> </button>
+<button  > </button>

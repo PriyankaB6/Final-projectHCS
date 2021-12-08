@@ -19,16 +19,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterModule, Routes } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
+import { InboxComponent } from './inbox/inbox.component';
+import { NursePatientInfoComponent } from './nurse/nurse-patient-info/nurse-patient-info.component';
 
 
 const routes2: Routes = [
  
-
   {
     path: 'dashboard',
     children: [
       { path: '', component: AdminDashboardComponent },
-      { path: 'registration', component: CorporateRegisterationComponent,outlet: 'admin' },
+      { path: 'registration', component: CorporateRegisterationComponent,outlet:'second' },
     ],
   },
 ]
@@ -38,6 +39,8 @@ const routes2: Routes = [
   declarations: [
     CorporateRegisterationComponent,
     AdminDashboardComponent,
+    InboxComponent,
+    NursePatientInfoComponent,
   ],
   imports: [
     CommonModule,
@@ -61,7 +64,9 @@ const routes2: Routes = [
     MatToolbarModule,
     MatCardModule,
  
-  ]
+  ],
+
 
 })
+
 export class AdminModule { }

@@ -26,7 +26,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -73,7 +72,6 @@ const routes: Routes = [
     MatDialogModule,
     MatTreeModule,
     MatSidenavModule,
-    
     MatExpansionModule,
     BrowserAnimationsModule,
    
@@ -82,6 +80,6 @@ const routes: Routes = [
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

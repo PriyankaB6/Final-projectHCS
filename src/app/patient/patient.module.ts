@@ -26,6 +26,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PatientDemographicInfoComponent } from './patient-demographic-info/patient-demographic-info.component';
 
 const routes3: Routes = [
   { path: 'dashboard', component: PatientDashboardComponent },
@@ -38,7 +39,8 @@ const routes3: Routes = [
 @NgModule({
   declarations: [
     PatientRegistrationComponent,
-    PatientDashboardComponent
+    PatientDashboardComponent,
+    PatientDemographicInfoComponent
   ],
   imports: [
     CommonModule,
